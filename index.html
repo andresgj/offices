@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
+		<style>
+			.iframeContainer{
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			.iframeContent{
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="iframeContainer">
+			<iframe src="https://framevr.io/dky-hdr-axx" scrolling="no" class="iframeContent" style="overflow: hidden;"></iframe>
+		</div>
+		<a-scene>
+    		<!-- Camera + controllers rig -->
+    		<a-entity id="rig">
+        		<a-camera position="0 1.6 0"></a-camera>
+        		<a-entity oculus-touch-controls="hand: left" ></a-entity>
+        		<a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+    			</a-entity>
+		</a-scene>
+	</body>
+</html>
